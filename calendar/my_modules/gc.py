@@ -10,7 +10,7 @@ from google.oauth2.service_account import Credentials
 
 def insert_schedule():
  # サービスアカウントのJSONファイルパス
-    GOOGLE_APPLICATION_CREDENTIALS='./certain-horizon-269807-1d0139b72cd4.json'
+    GOOGLE_APPLICATION_CREDENTIALS=os.environ['GOOGLE_CREDENTIALS_FILE']
 
     c = Credentials.from_service_account_file(GOOGLE_APPLICATION_CREDENTIALS)
     service = build('calendar', 'v3', credentials=c)
