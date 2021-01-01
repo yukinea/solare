@@ -13,4 +13,12 @@ $ mkdir lib
 $ pip install -t lib/ -r ./requirements.txt
 ```
 
+# zip化
+解凍したときにlambda_function.py が置いてあるディレクトリがむき出しで展開されるようにする
+```
+$ cd solare
+$ zip -r solare.zip * -x \*/__pycache__/\*
+```
+
+
 
