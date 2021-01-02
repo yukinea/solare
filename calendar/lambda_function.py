@@ -1,6 +1,8 @@
 import json
+import os
 import sys
 
+sys.path.append(os.path.join(os.path.dirname(__file__), 'app'))
 from my_calendar import google_calendar
 
 def lambda_handler(event, context):

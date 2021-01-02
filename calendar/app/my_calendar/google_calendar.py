@@ -3,7 +3,7 @@ import datetime
 import os.path
 import sys
 
-sys.path.append(os.environ['ROOT_DIR'] + '/lib')
+sys.path.append(os.path.join(os.path.dirname(__file__), '../../lib'))
 from googleapiclient.discovery import build
 from google.oauth2.service_account import Credentials
 
