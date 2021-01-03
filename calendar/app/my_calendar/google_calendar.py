@@ -72,10 +72,16 @@ class GoogleCalendar:
     
         # Call the Calendar API
         body = _get_insert_body( _body )
-        insert_result = self.service.events().insert(
+        insert_result = None
+        try:
+            insert_result = self.service.events().insert(
                 calendarId=self.calendar_id,
                 body=body
                 ).execute()
+        except Exception as e:
+            print(e)
+
+        return insert_result
     
     #   events = events_result.get('items', [])
 #    
